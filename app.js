@@ -29,7 +29,7 @@ const corsOptions = {
 db.connectDB()
 const app = express()
 app.use(cors(corsOptions));
-app.use('/auth', authRoutes);
+
 app.use(express.json())
 app.use(expressLayouts)
 app.use(express.urlencoded())
@@ -71,7 +71,7 @@ app.use((req, res, next) => {
 //     next();
 // });
 
-
+app.use('/auth', authRoutes);
 app.use('/',require('./routes/auth'))
 app.use('/',require('./routes/loggedin'))
 
