@@ -19,7 +19,7 @@ const authRoutes = require('./routes/auth');
 
 
 const corsOptions = {
-    origin: process.env.FRONTEND_URL || 'http://localhost:5173',
+    origin: 'https://dolist-app-seven.vercel.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true

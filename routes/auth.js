@@ -12,7 +12,7 @@ const router = express.Router();
 
 
 router.get('/check-auth', (req, res) => {
-  res.header('Access-Control-Allow-Origin', process.env.FRONTEND_URL || 'http://localhost:5173');
+  res.header('Access-Control-Allow-Origin', 'https://dolist-app-seven.vercel.app/');
   res.header('Access-Control-Allow-Credentials', 'true');
   if (res.locals.isAuthenticated) {
     res.status(200).json({ authenticated: true });
